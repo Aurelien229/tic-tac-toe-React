@@ -127,7 +127,7 @@ export default function Game() {
       
         <div className="py-4 mb-8 md:py-8 text-center text-lg md:text-6xl font-bold">Jeu de Tic Tac Toe</div>
         {!playersSet || changePlayers ? (
-          <div className="flex flex-col items-center">
+          <form className="flex flex-col items-center">
             <div className="mb-2 md:mb-4">
               <input type="text" id="player1" value={playerNames.player1} onChange={(e) => handlePlayerNameChange('player1', e)} className="input w-full md:w-72 mb-2 md:mb-4 bg-transparent border-none outline-none text-xl md:text-3xl flex items-center justify-center rounded-full p-2 bg-[#171717] shadow-[inset_2px_5px_10px_rgb(5,5,5)]" placeholder=" Nom du joueur X" />
             </div>
@@ -138,7 +138,7 @@ export default function Game() {
               <button onClick={handleStartGame} className="btn  md:w-72 mt-2 md:mt-4 bg-transparent border-none outline-none text-xl md:text-3xl flex items-center justify-center rounded-full p-2 bg-[#171717] shadow-[inset_2px_5px_10px_rgb(5,5,5)]">Commencer le jeu</button>
             )}
             
-          </div>
+          </form>
         ) : (
           <div className="flex justify-center flex-col">
             <div className="w-full  flex justify-center">
